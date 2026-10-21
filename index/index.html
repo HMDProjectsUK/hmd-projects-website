@@ -3,34 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HMD Projects</title>
+<title>HMD Projects | M&E Asset Consultancy</title>
 
 <style>
-body{
-    font-family: Arial, sans-serif;
+
+*{
     margin:0;
-    line-height:1.6; 
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#333;
+    line-height:1.6;
 }
 
 header{
     background:#0f172a;
     color:white;
-    padding:80px 20px;
     text-align:center;
+    padding:60px 20px;
+}
+
+.logo{
+    max-width:200px;
+    margin-bottom:20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
 }
 
 section{
-    padding:50px 20px;
-    max-width:1200px;
-    margin:auto;
+    margin-bottom:60px;
 }
 
-h1,h2{
+h2{
     color:#0f172a;
-}
-
-.hero h1{
-    color:white;
+    margin-bottom:20px;
 }
 
 .services{
@@ -41,8 +63,26 @@ h1,h2{
 
 .card{
     border:1px solid #ddd;
-    padding:20px;
     border-radius:10px;
+    padding:20px;
+    background:white;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.contact{
+    background:#f5f5f5;
+    border-radius:10px;
+    padding:30px;
+}
+
+.contact a{
+    color:#0066cc;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contact a:hover{
+    text-decoration:underline;
 }
 
 footer{
@@ -51,72 +91,103 @@ footer{
     text-align:center;
     padding:20px;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<header class="hero">
-    <img src="logo.png" alt="HMD Projects Logo" style="max-width:180px; margin-bottom:20px;">
-    <h1>HMD Projects</h1>
-    <p>M&E Asset Surveying, Lifecycle Planning & Technical Consultancy</p>
+<header>
+
+<img src="logo.png" alt="HMD Projects Logo" class="logo">
+
+<h1>HMD Projects</h1>
+
+<p>M&E Asset Surveying, Lifecycle Planning & Technical Consultancy</p>
+
 </header>
 
+<div class="container">
+
 <section>
-    <h2>About Us</h2>
-    <p>
-        HMD Projects provides specialist M&E asset surveying,
-        condition surveys, lifecycle planning and technical consultancy
-        services throughout the UK.
-    </p>
+
+<h2>About HMD Projects</h2>
+
+<p>
+HMD Projects provides specialist M&E asset surveying,
+condition surveys, asset verification, lifecycle planning
+and technical consultancy services throughout the UK.
+</p>
+
 </section>
 
 <section>
-    <h2>Services</h2>
 
-    <div class="services">
+<h2>Services</h2>
 
-        <div class="card">
-            <h3>M&E Asset Surveys</h3>
-            <p>Comprehensive mechanical and electrical asset surveys.</p>
-        </div>
+<div class="services">
 
-        <div class="card">
-            <h3>Condition Surveys</h3>
-            <p>Detailed condition assessments and reporting.</p>
-        </div>
+<div class="card">
+<h3>M&E Asset Surveys</h3>
+<p>Comprehensive asset verification and condition surveys.</p>
+</div>
 
-        <div class="card">
-            <h3>Lifecycle Planning</h3>
-            <p>Asset replacement forecasting and capital planning.</p>
-        </div>
+<div class="card">
+<h3>Condition Surveys</h3>
+<p>Detailed reporting and asset condition assessments.</p>
+</div>
 
-        <div class="card">
-            <h3>Asset Verification</h3>
-            <p>Validation of asset databases and records.</p>
-        </div>
+<div class="card">
+<h3>Lifecycle Planning</h3>
+<p>Asset replacement forecasting and capital planning.</p>
+</div>
 
-    </div>
+<div class="card">
+<h3>Asset Verification</h3>
+<p>Validation and auditing of asset data and registers.</p>
+</div>
+
+</div>
+
 </section>
 
-<section>
-    <h2>Contact</h2>
+<section class="contact">
 
-   <p>
-Email:
+<h2>Contact Us</h2>
+
+<p>
+<strong>Email:</strong><br>
 <a href="mailto:enquiries@hmdprojects.uk">
 enquiries@hmdprojects.uk
 </a>
 </p>
 
-    <p>
-        Greater Manchester • UK Wide Coverage
-    </p>
+<br>
+
+<p>
+<strong>Phone:</strong><br>
+<a href="tel:+447000000000">
+Replace with your mobile number
+</a>
+</p>
+
+<br>
+
+<p>
+<strong>Coverage:</strong><br>
+Greater Manchester • North West • UK Wide
+</p>
+
 </section>
 
+</div>
+
 <footer>
-    &copy; 2026 HMD Projects 
+
+<p>
+© 2026 HMD Projects. All Rights Reserved.
+</p>
+
 </footer>
 
 </body>
