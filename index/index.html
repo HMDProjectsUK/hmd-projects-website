@@ -18,39 +18,94 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:#333;
-    line-height:1.7;
-    background:#f8fafc;
+html{
+    scroll-behavior:smooth;
 }
 
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8fafc;
+    color:#333;
+    line-height:1.7;
+}
+
+/* TOP CONTACT BAR */
+
+.topbar{
+    background:#0f172a;
+    text-align:center;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.topbar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* HERO SECTION */
+
 .hero{
-    background:linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.85)),
+    background:linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)),
     url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab");
     background-size:cover;
     background-position:center;
-    color:white;
     text-align:center;
+    color:white;
     padding:100px 20px;
 }
 
 .logo{
-    width:400px;
-    max-width:90%;
-    margin-bottom:20px;
+    width:320px;
+    max-width:85%;
+    margin-bottom:25px;
 }
 
 .hero h1{
     font-size:3rem;
-    margin-bottom:15px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    font-size:1.5rem;
+    font-weight:400;
+    margin-bottom:20px;
 }
 
 .hero p{
     max-width:800px;
     margin:auto;
-    font-size:1.2rem;
 }
+
+.button{
+    display:inline-block;
+    margin-top:30px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* STATS STRIP */
+
+.credentials{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    background:white;
+    padding:25px;
+    text-align:center;
+    font-weight:bold;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+/* GENERAL */
 
 .container{
     max-width:1200px;
@@ -59,7 +114,7 @@ body{
 }
 
 section{
-    margin-bottom:80px;
+    margin-bottom:70px;
 }
 
 h2{
@@ -67,25 +122,34 @@ h2{
     margin-bottom:20px;
 }
 
-.about{
+.about,
+.why,
+.contact{
     background:white;
     padding:40px;
     border-radius:12px;
-    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
 
-.services {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
 }
 
 .service{
     background:white;
     padding:25px;
     border-radius:12px;
-    border-top:4px solid #2563eb;
-    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+    border-top:5px solid #2563eb;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-5px);
 }
 
 .service h3{
@@ -93,12 +157,7 @@ h2{
     margin-bottom:10px;
 }
 
-.why{
-    background:white;
-    padding:40px;
-    border-radius:12px;
-    box-shadow:0 3px 12px rgba(0,0,0,0.08);
-}
+/* WHY US */
 
 .why ul{
     padding-left:20px;
@@ -108,11 +167,11 @@ h2{
     margin-bottom:10px;
 }
 
+/* CONTACT */
+
 .contact{
     background:#0f172a;
     color:white;
-    padding:40px;
-    border-radius:12px;
 }
 
 .contact h2{
@@ -122,22 +181,15 @@ h2{
 .contact a{
     color:#60a5fa;
     text-decoration:none;
+    font-weight:bold;
+    font-size:1.1rem;
 }
 
 .contact a:hover{
     text-decoration:underline;
 }
 
-.button{
-    display:inline-block;
-    margin-top:25px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:8px;
-    font-weight:bold;
-}
+/* FOOTER */
 
 footer{
     background:#0f172a;
@@ -146,10 +198,63 @@ footer{
     padding:25px;
 }
 
+/* MOBILE */
+
+@media (max-width:768px){
+
+.hero{
+    padding:70px 20px;
+}
+
+.logo{
+    width:220px;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
+.hero h2{
+    font-size:1.15rem;
+}
+
+.button{
+    width:100%;
+    max-width:300px;
+    display:block;
+    margin:20px auto 0 auto;
+}
+
+.credentials{
+    flex-direction:column;
+    gap:10px;
+}
+
+.about,
+.why,
+.contact{
+    padding:25px;
+}
+
+.container{
+    padding:40px 15px;
+}
+
+.contact a{
+    word-break:break-word;
+}
+}
+
 </style>
 </head>
 
 <body>
+
+<div class="topbar">
+<a href="mailto:info@hmdprojects.uk">
+📧 info@hmdprojects.uk
+</a>
+</div>
 
 <header class="hero">
 
@@ -157,36 +262,44 @@ footer{
 
 <h1>HMD Projects</h1>
 
-<p>
-Specialist M&E Asset Surveying, Lifecycle Planning and Technical Consultancy
-</p>
-
-<br>
+<h2>M&E Asset Surveying & Technical Consultancy</h2>
 
 <p>
-Helping organisations understand, manage and invest in their building services assets through accurate survey data and technical consultancy.
+Supporting clients across the UK and internationally with specialist M&E asset surveying, lifecycle planning and technical consultancy services.
 </p>
 
-<a href="#contact" class="button">Request a Consultation</a>
+<a href="#contact" class="button">
+Request a Consultation
+</a>
 
 </header>
+
+<div class="credentials">
+
+<div>30+ Years Experience</div>
+
+<div>M&E Asset Specialists</div>
+
+<div>UK & International Coverage</div>
+
+</div>
 
 <div class="container">
 
 <section>
 
-<h2>About HMD Projects Ltd</h2>
+<h2>About HMD Projects</h2>
 
 <div class="about">
 
 <p>
-With over 30 years of experience in electrical engineering, building services maintenance, asset management and project delivery, HMD Projects provided specialist consultancy services supporting estate managers, facilities teams and property owners across the UK.
+With over 30 years of experience in electrical engineering, building services maintenance, asset management and project delivery, Mike Donohoe provides specialist consultancy services supporting estate managers, facilities teams and property owners across the UK.
 </p>
 
 <br>
 
 <p>
-They have experience spanning Electrical Installation, Building Services Maintenance, Project Management, Asset Verification, Lifecycle Modelling, Condition Surveys and Technical Consultancy.
+Our experience spans Electrical Installation, Building Services Maintenance, Project Management, Asset Verification, Lifecycle Modelling, Condition Surveys and Technical Consultancy.
 </p>
 
 <br>
@@ -206,33 +319,33 @@ HMD Projects delivers practical, reliable and independent professional advice to
 <div class="services">
 
 <div class="service">
-<h3>M&E Asset Surveys</h3>
-<p>Comprehensive asset verification and data collection for mechanical and electrical building services assets.</p>
+<h3>⚙️ M&E Asset Surveys</h3>
+<p>Comprehensive asset verification and data collection.</p>
 </div>
 
 <div class="service">
-<h3>Condition Surveys</h3>
-<p>Detailed condition assessments supporting maintenance and investment planning.</p>
+<h3>🔍 Condition Surveys</h3>
+<p>Detailed condition assessments and reporting.</p>
 </div>
 
 <div class="service">
-<h3>Lifecycle Planning</h3>
-<p>Forward capital expenditure forecasting based on asset age, condition and criticality.</p>
+<h3>📈 Lifecycle Planning</h3>
+<p>Forward capital expenditure forecasting.</p>
 </div>
 
 <div class="service">
-<h3>Asset Verification</h3>
-<p>Validation of existing asset registers against physical installations.</p>
+<h3>✅ Asset Verification</h3>
+<p>Validation of asset registers and records.</p>
 </div>
 
 <div class="service">
-<h3>Compliance Reviews</h3>
-<p>Technical review of asset compliance and statutory obligations.</p>
+<h3>📋 Compliance Reviews</h3>
+<p>Technical compliance and statutory reviews.</p>
 </div>
 
 <div class="service">
-<h3>Technical Consultancy</h3>
-<p>Independent professional advice for public and private sector estates.</p>
+<h3>🏢 Consultancy Services</h3>
+<p>Independent professional M&E consultancy.</p>
 </div>
 
 </div>
@@ -265,7 +378,7 @@ HMD Projects delivers practical, reliable and independent professional advice to
 <h2>Contact HMD Projects</h2>
 
 <p>
-Email:
+📧 General Enquiries<br>
 <a href="mailto:info@hmdprojects.uk">
 info@hmdprojects.uk
 </a>
@@ -274,8 +387,8 @@ info@hmdprojects.uk
 <br>
 
 <p>
-Coverage:<br>
-Delivering M&E Asset Surveying and Consultancy Services Across the UK and Internationally
+🌍 Coverage<br>
+Based in Greater Manchester | Delivering M&E Asset Surveying and Consultancy Services Across the UK and Internationally
 </p>
 
 </div>
@@ -286,9 +399,7 @@ Delivering M&E Asset Surveying and Consultancy Services Across the UK and Intern
 
 <footer>
 
-<p>
-© 2026 HMD Projects. All Rights Reserved.
-</p>
+<p>© HMD Projects Ltd. All Rights Reserved.</p>
 
 </footer>
 
